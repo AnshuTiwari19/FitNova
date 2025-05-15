@@ -1,6 +1,6 @@
 import streamlit as st
 from algorithm.fuzzy_logic import FuzzyLogic
-import sqlalchemy
+import sqlalchemy as sq
 from sqlalchemy import text
 from models.eat import *
 from models.fit import *
@@ -9,7 +9,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 # Create database engine
-engine = sqlalchemy.create_engine("sqlite:///database/eatandfit.db")
+engine = sq.create_engine("sqlite:///database/eatandfit.db")
 
 # Set page configuration
 st.set_page_config(page_title='Eat & Fit', page_icon='images/logo.png')
